@@ -2,19 +2,17 @@ require "spec_helper"
 
 describe Dissect::Client do
 
-  describe "#search" do
+  describe "#code_search(gem, organisation, language)" do
     it "finds matching repos using gem" do
-      VCR.use_cassette(:search) do
-        response = subject.search("rails", "thoughtbot", "ruby")
+      VCR.use_cassette(:code_search) do
+        result = subject.code_search("rails", "thoughtbot", "ruby").first
+        expect(result.total_count).to eq(34)
 
-        matching_item = response.items.first
-        expect(matching_item.name).to eq("Appraisals")
-        expect(matching_item.html_url).to eq("https://github.com/thoughtbot/paul_revere/blob/949fa541ec255ebb08456ccc54ec222f6c3a06b3//Appraisals")
-
-        repo = matching_item.repository
-        expect(repo.name).to eq("paul_revere")
-        expect(repo.html_url).to eq("https://github.com/thoughtbot/paul_revere")
-        expect(repo.description).to eq("A library for \"one off\" announcements in Rails apps.")
+        finding = result.items.first
+        expect(finding.name).to eq("Gemfile")
+        expect(finding.path).to eq("/Gemfile")
+        expect(finding.html_url).to eq("https://github.com/thoughtbot/hound/blob/d194761d639e1786fabbc753167050b36ca522df//Gemfile")
+        expect(finding.repository.name).to eq("hound")
       end
     end
   end
