@@ -4,9 +4,11 @@
 
 [![Build Status](https://travis-ci.org/blacktangent/dissect.svg?branch=master)][travis]
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dissect`. To experiment with that code, run `bin/console` for an interactive prompt.
+Problem: Known Gems have has good or bad documentation, examples or
+Wikies, but what often lacks is examples of the features used in the wild.
 
-TODO: Delete this and the text above, and describe your gem
+Solution: Find Open Source projects for the Gems to see how the
+librarie's API's are being used in the wild to find good examples
 
 ## Installation
 
