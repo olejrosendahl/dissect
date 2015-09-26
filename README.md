@@ -12,11 +12,12 @@
 
 *EXPERIMENTAL*
 
-Problem: Known Gems have has good or bad documentation, examples or
-Wikies, but what often lacks is examples of the features used in the wild.
+Problem: Libraries are often well documented, but what often lacks to
+get started is to see examples of their features used in the wild.
 
-Solution: Find Open Source projects for the Gems to see how the
-libraries API's are being used in the wild to find good examples.
+Solution: Find Open Source projects on Github where the libraries are
+used. Learn their API's and see how other programmers use them and
+explore possibilities.
 
 ## Installation
 
