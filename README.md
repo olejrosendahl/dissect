@@ -10,6 +10,8 @@
 [![Test Coverage](http://img.shields.io/coveralls/olejrosendahl/dissect/master.svg)][coveralls]
 [![Gem Version](http://img.shields.io/gem/v/dissect.svg)][rubygems]
 
+*EXPERIMENTAL*
+
 Problem: Known Gems have has good or bad documentation, examples or
 Wikies, but what often lacks is examples of the features used in the wild.
 
