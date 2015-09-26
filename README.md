@@ -25,19 +25,21 @@ And then execute:
 Or install it yourself as:
 
     $ gem install dissect
-    
+
 ## API
 
-	# search organisation for given gem
-	search(organisation, gem_name, options = {})
+	# search organization for given gem name
+	code_search(gem_name, organization, options = {})
 
 ## Usage
 
 	dissect = Dissect::Client.new
-	findings = dissect.search("thoughtbot", "devise")
+	findings = dissect.code_search("rails", "thoughtbot", "ruby")
 	findings.each do |f|
-		puts f.name
-		puts f.link
+    puts f.name
+    puts f.path
+    puts f.html_url
+    puts f.repository_name
 	end
 
 ## Development
