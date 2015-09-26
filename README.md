@@ -1,8 +1,13 @@
-[travis]: https://travis-ci.org/blacktangent/dissect
+[travis]: https://travis-ci.org/olejrosendahl/dissect
+[codeclimate]: https://codeclimate.com/github/olejrosendahl/dissect
+[coveralls]: https://coveralls.io/r/olejrosendahl/dissect
 
 # Dissect
 
-[![Build Status](https://travis-ci.org/blacktangent/dissect.svg?branch=master)][travis]
+[![Build Status](https://travis-ci.org/olejrosendahl/dissect.svg?branch=master)][travis]
+[![Code Climate](https://codeclimate.com/github/olejrosendahl/dissect/badges/gpa.svg)][codeclimate]
+[![Test Coverage](http://img.shields.io/coveralls/olejrosendahl/dissect/master.svg)][coveralls]
+[![Gem Version](http://img.shields.io/gem/v/dissect.svg)][rubygems]
 
 Problem: Known Gems have has good or bad documentation, examples or
 Wikies, but what often lacks is examples of the features used in the wild.
@@ -28,19 +33,23 @@ Or install it yourself as:
 
 ## API
 
-	# search organization for given gem name
-	code_search(gem_name, organization, options = {})
+```ruby
+# search organization for given gem name
+code_search(gem_name, organization, options = {})
+```
 
 ## Usage
 
-	dissect = Dissect::Client.new
-	findings = dissect.code_search("rails", "thoughtbot", "ruby")
-	findings.each do |f|
-    puts f.name
-    puts f.path
-    puts f.html_url
-    puts f.repository_name
-	end
+```ruby
+dissect = Dissect::Client.new
+findings = dissect.code_search("rails", "thoughtbot", "ruby")
+findings.each do |f|
+  puts f.name
+  puts f.path
+  puts f.html_url
+  puts f.repository_name
+end
+```
 
 ## Development
  
