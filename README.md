@@ -1,6 +1,7 @@
 [travis]: https://travis-ci.org/olejrosendahl/dissect
 [codeclimate]: https://codeclimate.com/github/olejrosendahl/dissect
 [coveralls]: https://coveralls.io/r/olejrosendahl/dissect
+[rubygems]: https://rubygems.org/gems/dissect
 
 # Dissect
 
