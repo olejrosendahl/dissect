@@ -2,7 +2,7 @@ require "spec_helper"
 
 module Dissect
   module Models
-    describe Repository do
+    describe Finding do
     end
   end
 end
