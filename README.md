@@ -39,7 +39,7 @@ Or install it yourself as:
 
 ```ruby
 # search organization for given gem name
-code_search(gem_name, organization, options = {})
+code_search(gem_name, organization, language)
 ```
 
 ## Usage

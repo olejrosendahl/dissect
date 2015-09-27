@@ -10,10 +10,10 @@ module Dissect
       @connection = Octokit::Client.new
     end
 
-    def code_search(gem, organisation, language)
+    def code_search(organization, gem_name, language)
       findings = []
       PATTERNS.each do |pattern|
-        result = @connection.get("/search/code", q: query_string(pattern, gem, organisation, language))
+        result = @connection.get("/search/code", q: query_string(pattern, gem_name, organization, language))
         result[:items].each do |item|
           findings << Models::Finding.new(item)
         end
