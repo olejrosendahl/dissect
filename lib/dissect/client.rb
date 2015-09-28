@@ -1,21 +1,17 @@
 module Dissect
   class Client
 
-    PATTERNS = [
-      "gem '%s' filename:Gemfile path:/",
-      "gem \"%s\" filename:Gemfile path:/",
-    ]
-
     def initialize
       @connection = Octokit::Client.new
     end
 
     def code_search(organization, gem_name, language)
       findings = []
-      PATTERNS.each do |pattern|
-        result = @connection.get("/search/code", q: query_string(pattern, gem_name, organization, language))
+      patterns.each do |pattern|
+        query = "#{sprintf(pattern["pattern"], gem_name)} filename:#{pattern["filename"]} path:#{pattern["path"]} user:#{organization} language:#{language}"
+        result = @connection.get("/search/code", q: query)
         result[:items].each do |item|
-          findings << Models::Finding.new(item)
+          findings << Models::Finding.new(item, pattern["description"])
         end
       end
       findings
@@ -25,6 +21,12 @@ module Dissect
 
     def query_string(pattern, gem, user, language)
       sprintf(pattern, gem) + " user:#{user} language:#{language}"
+    end
+
+    private
+
+    def patterns
+      JSON.parse(File.read("#{File.dirname(__FILE__)}/../../patterns.json"))
     end
 
   end

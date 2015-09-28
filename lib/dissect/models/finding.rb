@@ -1,10 +1,10 @@
 module Dissect
   module Models
     class Finding
-      attr_accessor :item
+      attr_accessor :item, :description
 
-      def initialize(item)
-        @item = item
+      def initialize(item, description)
+        @item, @description = item, description
       end
 
       def name
