@@ -38,15 +38,15 @@ Or install it yourself as:
 ## API
 
 ```ruby
-# search organization for given gem name
-code_search(gem_name, organization, language)
+# search organization for given library name
+find(organization, name)
 ```
 
 ## Usage
 
 ```ruby
-dissect = Dissect::Client.new
-findings = dissect.code_search("rails", "thoughtbot", "ruby")
+dissect = Dissect::Finders::GemFinder.new
+findings = dissect.code_search("thoughtbot", "devise")
 findings.each do |f|
   puts f.name
   puts f.path

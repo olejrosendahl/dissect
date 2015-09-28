@@ -1,5 +1,4 @@
 require "dissect/version"
-require "dissect/client"
 require "dissect/formatters/json"
 require "dissect/models/finding"
 require "dissect/finders/base"
