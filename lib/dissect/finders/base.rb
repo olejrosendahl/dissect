@@ -1,6 +1,7 @@
 module Dissect
   module Finders
     class Base
+
       def initialize
         @connection = Octokit::Client.new
       end

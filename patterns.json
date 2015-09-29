@@ -1,12 +1,6 @@
 [
   {
-    "pattern": "gem '%s'",
-    "filename": "Gemfile",
-    "path": "/",
-    "description": "Gemfile"
-  },
-  {
-    "pattern": "gem \"%s\"",
+    "pattern": "gem %s",
     "filename": "Gemfile",
     "path": "/",
     "description": "Gemfile"

@@ -12,7 +12,7 @@ module Dissect
         end
 
         it "finds matching repos using gem" do
-          expect(findings.length).to be(4)
+          expect(findings.length).to be(2)
           finding = findings.first
 
           expect(finding).to be_instance_of(Models::Finding)
