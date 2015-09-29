@@ -35,13 +35,6 @@ Or install it yourself as:
 
     $ gem install dissect
 
-## API
-
-```ruby
-# search organization for given library name
-find(organization, name)
-```
-
 ## Usage
 
 ```ruby
@@ -52,6 +45,7 @@ findings.each do |f|
   puts f.path
   puts f.html_url
   puts f.repository_name
+  puts f.to_json
 end
 ```
 
