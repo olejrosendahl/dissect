@@ -46,7 +46,7 @@ find(organization, name)
 
 ```ruby
 dissect = Dissect::Finders::GemFinder.new
-findings = dissect.code_search("thoughtbot", "devise")
+findings = dissect.find("thoughtbot", "devise")
 findings.each do |f|
   puts f.name
   puts f.path
