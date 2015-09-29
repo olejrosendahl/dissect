@@ -23,6 +23,15 @@ module Dissect
         item.repository.name
       end
 
+      def to_json
+        JSON.generate({
+          name:            name,
+          path:            path,
+          html_url:        html_url,
+          repository_name: repository_name,
+        })
+      end
+
     end
   end
 end
