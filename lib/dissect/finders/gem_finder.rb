@@ -1,6 +1,6 @@
 module Dissect
   module Finders
-    class GemFinder < Base
+    class GemFinder < BaseFinder
 
       def find(organization, name)
         super(organization, name, "ruby")
