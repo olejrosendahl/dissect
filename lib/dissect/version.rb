@@ -1,3 +1,3 @@
 module Dissect
-  VERSION = "0.1.2pre"
+  VERSION = "0.2.0pre"
 end

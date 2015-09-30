@@ -4,7 +4,7 @@ module Dissect
   module Models
     describe Finding do
       let(:finding) do
-        repository = Struct.new(:name).new("thoughtbot/podcasts")
+        repository = Struct.new(:name).new("podcasts")
         Struct.new(
           :name, :path, :html_url, :repository
         ).new(
@@ -16,8 +16,19 @@ module Dissect
       describe "#to_json" do
         it "returns the finding in JSON" do
           expect(subject.to_json).to eq(
-            "{\"name\":\"podcasts\",\"path\":\"/Gemfile\",\"html_url\":\"https://example.com\",\"repository_name\":\"thoughtbot/podcasts\"}"
+            "{\"name\":\"podcasts\",\"path\":\"/Gemfile\",\"html_url\":\"https://example.com\",\"repository_name\":\"podcasts\"}"
           )
+        end
+      end
+
+      describe "#to_hash" do
+        it "returns the object as a hash" do
+          expect(subject.to_hash).to eq({
+            name: "podcasts",
+            path: "/Gemfile",
+            html_url: "https://example.com",
+            repository_name: "podcasts"
+          })
         end
       end
 

@@ -24,12 +24,16 @@ module Dissect
       end
 
       def to_json
-        JSON.generate({
+        JSON.generate(to_hash)
+      end
+
+      def to_hash
+        {
           name:            name,
           path:            path,
           html_url:        html_url,
           repository_name: repository_name,
-        })
+        }
       end
 
     end

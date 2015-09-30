@@ -46,6 +46,7 @@ findings.each do |f|
   puts f.html_url
   puts f.repository_name
   puts f.to_json
+  puts f.to_hash
 end
 ```
 
