@@ -50,6 +50,16 @@ findings.each do |f|
 end
 ```
 
+## TODO
+
+Dissect should also be able to search third-party multiple languages and
+package managers. Feature versions should be able to support:
+
+* __NPM__ - NPM packages, package.json files.
+* __Cargo__ - Rust packages, Cargo.toml files.
+* __MIX__ - Elixir packages, mix.exs files.
+* __CocoaPods__ - Cocoa packages, Podfiles.
+
 ## Development
  
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
