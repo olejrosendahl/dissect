@@ -45,6 +45,7 @@ findings.each do |f|
   puts f.path
   puts f.html_url
   puts f.repository_name
+  puts f.score
   puts f.to_json
   puts f.to_hash
 end

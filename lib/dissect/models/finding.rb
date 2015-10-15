@@ -23,6 +23,10 @@ module Dissect
         item.repository.name
       end
 
+      def score
+        item.score
+      end
+
       def to_json
         JSON.generate(to_hash)
       end
@@ -33,6 +37,7 @@ module Dissect
           path:            path,
           html_url:        html_url,
           repository_name: repository_name,
+          score: score
         }
       end
 
