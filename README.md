@@ -39,13 +39,14 @@ Or install it yourself as:
 
 ```ruby
 dissect = Dissect::Finders::GemFinder.new
-findings = dissect.find("thoughtbot", "devise")
+findings = dissect.find(["thoughtbot","plataformatec"], "devise")
 findings.each do |f|
   puts f.name
   puts f.path
   puts f.html_url
   puts f.repository_name
   puts f.score
+  puts f.owner_name
   puts f.to_json
   puts f.to_hash
 end

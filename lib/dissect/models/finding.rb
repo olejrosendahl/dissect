@@ -19,6 +19,10 @@ module Dissect
         item.html_url
       end
 
+      def owner_name
+        item.repository.owner.login
+      end
+
       def repository_name
         item.repository.name
       end
